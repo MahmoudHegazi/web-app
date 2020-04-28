@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html><html><head>
+  <title>Ticket Maker</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&amp;display=swap" rel="stylesheet"/>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.myapp {
+  border: 2px solid black;
+  background-color: white;
+  background-image:url("https://media.istockphoto.com/videos/particle-backgrounds-video-id843276540?s=640x640");
+  
+}
+
+.video_div {
+  background-color: transparent; /* #ff414e*/
+  padding: 10px;
+  
+}
+
+.first_row {
+  background-color: transparent; /*#478559 */
+  padding-top: 15px;
+
+}
+
+.header_text {
+
+  /* background-color: #478559; */
+
+  color: white;
+  width: 50%;
+  padding: 10px 0px;
+  margin: auto;
+  text-align: center;
+  
+  
+  }
+
+.ticket_maker_text {
+  font-family: 'Lalezar', cursive;
+
+
+  margin-top: 10px;
+
+  }
+
+/* first row */
+.mytooltip {
+  position: relative;
+  display: inline-block;    
+ 
+}
+
+.mytooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 30px;
+  left: 12%;
+  bottom: 50px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  
+
+}
+
+.mytooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* first row end tooltip */
+
+
+
+
+
+
+
+/* glow */
+
+.glow {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px blue, 0 0 20px #fff, 0 0 30px gold, 0 0 40px #e60073, 0 0 50px lightblue, 0 0 60px green, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px grey, 0 0 30px grey, 0 0 40px grey, 0 0 50px grey, 0 0 60px grey, 0 0 70px gold, 0 0 80px blue;
+  }
+}
+
+/* end glow color*/
+
+
+
+/* some height */
+.height_100px {
+  height: 100px;
+}
+
+.height_50px {
+  height: 50px;
+}
+
+/* button style */
+
+
+.block {
+  display: block;
+  width: 100%;
+  border: 2px solid gold;
+  border-radius: 5%;
+  background-color: transparent;  
+  color: gold;
+  font-weight: bold;
+  font-family: Courier;
+  padding: 14px 35px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 60px;  
+
+}
+
+
+
+.second_row {
+  margin: 0;
+  padding: 0;
+}
+
+/* remove border contenteditabe */
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+/* logo */
+
+ .mylogo {
+    margin-top: -13px;
+  }
+  
+/* google font classs */
+.google_font1 {
+  font-family: 'Lalezar', cursive;
+  font-size: 16px;
+}
+
+.animated_button {
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: #4CAF50;
+  background-image:url("https://wallpapercave.com/wp/wp3398828.jpg");
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.animated_button:hover {color: blue}
+
+.animated_button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.first_row  .mail_link {
+  text-decoration:none;
+}
+</style>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-75065234-3', 'auto');
+			ga('send', 'pageview', '/lordoticteach.html');
+		</script>
+		<script>
+		window.goatcounter = {
+			path: '/lordoticteach.html'
+		};
+		</script>
+		<script data-goatcounter="https://htmlpasta.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></head>
+<body style="text-align:center;">
+
+<div class="myapp">
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+       <img class="mylogo" src="https://pyramidbits.xyz/wp-content/uploads/2019/04/Copy-of-Copy-of-pyramidBITS.png" width="125"/>
+      </a>
+    </div>
+    
+    <ul class="nav navbar-nav">    
+      <li class="active google_font1"><a href="#">Home</a></li>
+      <li><a class="google_font1" href="#">English</a></li>
+      <li><a class="google_font1" href="#">Arabic</a></li>
+      <li><button class="btn btn-danger navbar-btn glow google_font1">Login</button></li>
+    </ul>
+
+    <form class="navbar-form navbar-right" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search"/>
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    
+  </div>
+  
+</nav>
+
+  <div class="container header_text">
+   <h3 class="ticket_maker_text glow" style="font-size:25px;color:white;">Ticket Maker</h3>
+  </div>
+
+<br/>
+
+
+
+<!-- video here -->
+<div class="container video_div">
+<video class="" id="intro_video" width="80%" height="300" controls="">
+  <source src="" type="video/mp4"/>
+  <source src="" type="video/ogg"/>
+  Your browser does not support the video tag.
+</video>
+</div>
+<!-- -->
+
+
+
+<div class="container first_row">
+
+<!-- internet Problem -->
+<!-- here we add the NG-desk mail, and send mail -->
+<a class="mail_link" href="mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=Customer%20Have%20Problem%20in%20the%20Internet%20Fix%20it!" target="_top" style="text-decoration:none;">
+
+<button class="block animated_button" type="button" id="share_problem" onclick="share_function()" contenteditable="true"><b>An Internet Problem</b></button>
+
+</a>
+
+<br/><br/>
+
+<!-- Share Problem -->
+
+<!-- here we add the NG-desk mail, and send mail -->
+<a class="mail_link" href="mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=Customer%20Have%20Problem%20In%20a%20the%20Sharing%20file!" target="_top">
+
+<button class="block animated_button" type="button" id="share_problem" onclick="share_function()">Share File Problem</button>
+
+</a>
+
+<br/><br/>
+  
+<!-- Share Problem -->
+<a class="mail_link" href="mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=Customer%20Need%20an%20app%20with%20crack%20The%20app Name:firefox" target="_top">
+
+<button class="block animated_button" type="button" id="crack_problem" onclick="share_function()">Need an  Applaction</button>  
+</a>
+
+<br/><br/>
+<!-- Sales Problem -->
+
+<a class="mail_link" href="mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=Customer%20have%20sales%20problem%20please%20contact%20him%20fast!" target="_top">
+
+<button class="block animated_button" type="button" id="share_problem" onclick="share_function()">Have Sales Problem</button>
+ 
+<br/><br/>
+
+</a></div><a class="mail_link" href="mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=Customer%20have%20sales%20problem%20please%20contact%20him%20fast!" target="_top">
+</a>
+
+</div>
+
+<script>
+function share_function() {
+  alert("It's working");
+}
+</script>
+
+
+
+</body></html>
